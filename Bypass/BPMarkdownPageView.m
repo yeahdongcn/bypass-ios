@@ -44,8 +44,6 @@ BPContextFlipVertical(CGContextRef context, CGRect rect)
     self = [super initWithFrame:frame];
     
     if (self != nil) {
-        [self setBackgroundColor:[UIColor whiteColor]];
-        
         CFRetain(textFrame);
         _textFrame = textFrame;
     }
