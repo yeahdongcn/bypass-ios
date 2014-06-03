@@ -44,6 +44,10 @@
         self.quoteColor = [UIColor darkGrayColor];
         self.codeColor = [UIColor grayColor];
         self.linkColor = [UIColor blueColor];
+        self.bullet0Color = [UIColor blackColor];
+        self.bullet1Color = [UIColor grayColor];
+        self.bullet2Color = [UIColor lightGrayColor];
+        
         self.bulletIndentation = 13.0f;
         self.codeIndentation = 10.0f;
         self.quoteIndentation = 23.0f;

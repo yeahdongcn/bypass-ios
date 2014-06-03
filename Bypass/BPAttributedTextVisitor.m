@@ -174,6 +174,7 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
                  toTarget:(NSMutableAttributedString *)target
 {
     attributes[NSFontAttributeName] = font;
+    attributes[NSForegroundColorAttributeName] = [_displaySettings defaultColor];
     
     NSString *text;
     
@@ -344,20 +345,20 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
     
     switch (level % 3) {
         case 1:
-            bulletColor = [UIColor grayColor];
+            bulletColor = [_displaySettings bullet1Color];
             break;
         case 2:
-            bulletColor = [UIColor lightGrayColor];
+            bulletColor = [_displaySettings bullet2Color];
             break;
         default:
-            bulletColor = [BPDisplaySettings sharedDisplaySettings].defaultColor;
+            bulletColor = [_displaySettings bullet0Color];;
             break;
     }
     
     insertedCharacters += [self insertBulletIntoTarget:target color:bulletColor atIndex:(int)effectiveRange.location];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-     [paragraphStyle setLineSpacing:[_displaySettings lineSpacingSmall]];
+    [paragraphStyle setLineSpacing:[_displaySettings lineSpacingSmall]];
     
     NSDictionary *indentationAttributes = @{
                                             NSFontAttributeName : [UIFont systemFontOfSize:[_displaySettings bulletIndentation]],
