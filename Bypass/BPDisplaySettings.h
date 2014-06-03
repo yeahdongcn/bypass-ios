@@ -50,4 +50,6 @@
 @property(nonatomic) CGFloat headerFirstLineHeadIndent;
 @property(nonatomic) CGFloat headerHeadIndent;
 
++ (instancetype)sharedDisplaySettings;
+
 @end

@@ -22,7 +22,6 @@
 #import "BPMarkdownView.h"
 #import "BPMarkdownPageView.h"
 #import "BPParser.h"
-#import "BPDisplaySettings.h"
 #import "BPElementWalker.h"
 #import "BPAttributedTextVisitor.h"
 #import "BPAccessibilityVisitor.h"

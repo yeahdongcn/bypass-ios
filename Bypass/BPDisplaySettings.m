@@ -12,6 +12,16 @@
 
 @implementation BPDisplaySettings
 
++ (instancetype)sharedDisplaySettings
+{
+    static BPDisplaySettings *sharedDisplaySettings = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedDisplaySettings = [self init];
+    });
+    return sharedDisplaySettings;
+}
+
 - (id)init
 {
     self = [super init];

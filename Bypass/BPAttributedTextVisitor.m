@@ -36,7 +36,7 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
     
     if (self != nil) {
         _attributedText = [[NSMutableAttributedString alloc] init];
-        _displaySettings = [[BPDisplaySettings alloc] init];
+        _displaySettings = [BPDisplaySettings sharedDisplaySettings];
     }
     
     return self;
