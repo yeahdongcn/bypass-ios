@@ -17,7 +17,7 @@
     static BPDisplaySettings *sharedDisplaySettings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedDisplaySettings = [self init];
+        sharedDisplaySettings = [self new];
     });
     return sharedDisplaySettings;
 }
