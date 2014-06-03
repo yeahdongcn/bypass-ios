@@ -341,6 +341,7 @@
 		5ED7EA3717A31FBD00CC7087 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Uncodin, Inc";
 			};

@@ -350,11 +350,11 @@ NSString *const BPLinkTitleAttributeName = @"BPLinkTitleAttributeName";
             bulletColor = [UIColor lightGrayColor];
             break;
         default:
-            bulletColor = [UIColor blackColor];
+            bulletColor = [BPDisplaySettings sharedDisplaySettings].defaultColor;
             break;
     }
     
-    insertedCharacters += [self insertBulletIntoTarget:target color:bulletColor atIndex:effectiveRange.location];
+    insertedCharacters += [self insertBulletIntoTarget:target color:bulletColor atIndex:(int)effectiveRange.location];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
      [paragraphStyle setLineSpacing:[_displaySettings lineSpacingSmall]];
